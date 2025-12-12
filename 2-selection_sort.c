@@ -19,22 +19,22 @@ return;
 for (i = 0; i < size - 1; i++)
 {
 min_idx = i;
-        
-        /* Find the minimum element in unsorted array */
+
+/* Find the minimum element in unsorted array */
 for (j = i + 1; j < size; j++)
 {
 if (array[j] < array[min_idx])
 min_idx = j;
 }
 
-        /* Swap the found minimum element with the first element */
+/* Swap the found minimum element with the first element */
 if (min_idx != i)
 {
 temp = array[i];
 array[i] = array[min_idx];
 array[min_idx] = temp;
-            
-            /* Print array after swap */
+
+/* Print array after swap */
 print_array(array, size);
 }
 }
