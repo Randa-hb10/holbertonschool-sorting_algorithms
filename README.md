@@ -130,11 +130,8 @@ holbertonschool-sorting_algorithms/
 ---
 
 ## ✍️ Author
+Randa-hb10 \ rm-400000@hotmail.com
 
-**Randa Baeshen**
-Holberton School Student
+
 
 ---
-
-🚀 *This project strengthens core algorithmic thinking and prepares you for technical interviews and real-world problem solving.*
-
