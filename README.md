@@ -1,168 +1,140 @@
-# holbertonschool-sorting_algorithms
-Sorting Algorithms & Big O
+# C - Sorting Algorithms & Big O
 
-📖 Description  
-This project focuses on implementing and understanding **sorting algorithms** and analyzing their **time complexity using Big O notation**.  
-Sorting algorithms are fundamental in computer science and are widely used to organize data efficiently, optimize searches, and improve performance in real-world applications such as databases, operating systems, and data analysis tools.
+## 📖 Description
+
+This project is part of the **Holberton School** curriculum and focuses on implementing and understanding classic **sorting algorithms** in the C programming language. The goal is to explore how different algorithms work, compare their **time complexity**, and understand when and why to use each one.
+
+Sorting algorithms are fundamental in computer science and are widely used in real-world systems such as databases, operating systems, and search engines.
 
 ---
 
 ## 🎯 Learning Objectives
-At the end of this project, you should be able to explain:
 
-- At least four different sorting algorithms
-- What is Big O notation, and how to evaluate the time complexity of an algorithm
-- How to select the best sorting algorithm for a given input
-- What makes a sorting algorithm **stable**
-- The difference between comparison-based and non-comparison-based sorting algorithms
+By completing this project, you will be able to:
+
+* Understand what sorting algorithms are
+* Implement common sorting algorithms in C
+* Understand **Big O notation** and algorithmic complexity
+* Analyze time complexity (best, average, worst cases)
+* Choose the most appropriate sorting algorithm for a given problem
+* Work with arrays and doubly linked lists
 
 ---
 
 ## ⚙️ Requirements
-- Allowed editors: `vi`, `vim`, `emacs`
-- All files will be compiled on **Ubuntu 20.04 LTS**
-- Compilation options:
+
+* Allowed editors: `vi`, `vim`, `emacs`
+* All files will be compiled on **Ubuntu 20.04 LTS**
+* Compilation using:
+
   ```bash
-  gcc -Wall -Werror -Wextra -pedantic -std=gnu89
+  gcc -Wall -Wextra -Werror -pedantic -std=gnu89
+  ```
+* All files should end with a new line
+* A `README.md` file at the root of the project is mandatory
+* Code must follow **Betty style** (`betty-style.pl` and `betty-doc.pl`)
+* No global variables allowed
+* No more than **5 functions per file**
+* You may use the standard C library
+* The prototypes of all functions must be included in `sort.h`
+* All header files must be **include guarded**
 
+---
 
-All files should end with a new line
+## 📋 File Descriptions
 
-A README.md file at the root of the project folder is mandatory
+| File                    | Description                                                                 |
+| ----------------------- | --------------------------------------------------------------------------- |
+| sort.h                  | Header file containing function prototypes, data structures, and macros     |
+| 0-bubble_sort.c         | Function that sorts an array of integers using the Bubble sort algorithm    |
+| 1-insertion_sort_list.c | Function that sorts a doubly linked list of integers using Insertion sort   |
+| 2-selection_sort.c      | Function that sorts an array of integers using the Selection sort algorithm |
+| 3-quick_sort.c          | Function that sorts an array of integers using the Quick sort algorithm     |
+| print_array.c           | Function to print an array of integers                                      |
+| print_list.c            | Function to print a doubly linked list of integers                          |
+| README.md               | Project documentation                                                       |
 
-Your code should follow the Betty style
+---
 
-No global variables allowed
+## 🧠 Big O Notation
 
-No more than 5 functions per file
+The following table shows the **time complexity** of each sorting algorithm implemented in this project:
 
-You are allowed to use the standard library
+| Algorithm      | Best Case  | Average Case | Worst Case |
+| -------------- | ---------- | ------------ | ---------- |
+| Bubble Sort    | O(n)       | O(n²)        | O(n²)      |
+| Insertion Sort | O(n)       | O(n²)        | O(n²)      |
+| Selection Sort | O(n²)      | O(n²)        | O(n²)      |
+| Quick Sort     | O(n log n) | O(n log n)   | O(n²)      |
 
-The prototypes of all functions must be included in sort.h
+---
 
-All header files must be include guarded
+## 🛠️ Compilation Examples
 
-You are not allowed to modify the provided print_array and print_list functions
+Example of compiling a sorting algorithm:
 
-The main.c files are provided for testing only and should not be pushed to the repository
+```bash
+gcc -Wall -Wextra -Werror -pedantic -std=gnu89 \
+0-bubble_sort.c print_array.c main.c -o bubble
+```
 
-📁 File Descriptions
-File	Description
-sort.h	Header file containing function prototypes and data structures
-0-bubble_sort.c	Implementation of Bubble Sort
-1-insertion_sort_list.c	Implementation of Insertion Sort on a doubly linked list
-2-selection_sort.c	Implementation of Selection Sort
-3-quick_sort.c	Implementation of Quick Sort
-print_array.c	Function to print an array (provided)
-print_list.c	Function to print a doubly linked list (provided)
-README.md	Project documentation
+Run:
 
-🧠 Sorting Algorithms Implemented
-🟢 Bubble Sort
-Repeatedly steps through the list
-
-Compares adjacent elements and swaps them if they are in the wrong order
-
-Simple but inefficient for large datasets
-
-Time Complexity:
-
-Best: O(n)
-
-Average: O(n²)
-
-Worst: O(n²)
-
-🟢 Insertion Sort
-Builds the sorted list one element at a time
-
-Efficient for small datasets or nearly sorted lists
-
-Implemented using a doubly linked list
-
-Time Complexity:
-
-Best: O(n)
-
-Average: O(n²)
-
-Worst: O(n²)
-
-🟢 Selection Sort
-Repeatedly selects the smallest element from the unsorted part
-
-Swaps it with the first unsorted element
-
-Not stable and inefficient for large datasets
-
-Time Complexity:
-
-Best: O(n²)
-
-Average: O(n²)
-
-Worst: O(n²)
-
-🟢 Quick Sort
-Uses a divide-and-conquer strategy
-
-Picks a pivot element and partitions the array
-
-Very fast in practice
-
-Time Complexity:
-
-Best: O(n log n)
-
-Average: O(n log n)
-
-Worst: O(n²)
-
-📌 Big O Notation Files
-Each sorting algorithm has a corresponding file that contains its time complexity:
-
-Algorithm	File
-Bubble Sort	0-O
-Insertion Sort	1-O
-Selection Sort	2-O
-Quick Sort	3-O
-
-🛠️ Compilation Examples
-bash
-Copy code
-gcc -Wall -Wextra -Werror -pedantic -std=gnu89 0-bubble_sort.c print_array.c main.c -o bubble
+```bash
 ./bubble
-bash
-Copy code
-gcc -Wall -Wextra -Werror -pedantic -std=gnu89 1-insertion_sort_list.c print_list.c main.c -o insertion
-./insertion
-📊 Expected Output Example
-text
-Copy code
-19, 48, 99, 71, 13, 52, 96, 73
-13, 19, 48, 52, 71, 73, 96, 99
-🛡️ Edge Cases Handled
-Empty arrays
+```
 
-Arrays with one element
+> **Note:** `main.c` files are provided only for testing purposes and should **not** be pushed to the repository.
 
-Already sorted arrays
+---
 
-Arrays with duplicate values
+## 📊 Expected Output Example
 
-NULL pointers
+Example output after sorting:
 
-🔍 Concepts Covered
-Algorithm efficiency
+```text
+Before sorting:
+19, 48, 99, 71, 13
 
-Time and space complexity
+After sorting:
+13, 19, 48, 71, 99
+```
 
-Stable vs unstable sorting
+---
 
-Array and linked list manipulation
+## 🛡️ Edge Cases Handled
 
-Pointer operations in C
+* Empty arrays
+* Arrays with one element
+* Already sorted arrays
+* Reverse sorted arrays
+* Duplicate values
 
-✍️ Author
-Randa-hb10 \ rm-400000@hotmail.com
+---
+
+## 📂 Project Structure
+
+```
+holbertonschool-sorting_algorithms/
+│
+├── sort.h
+├── 0-bubble_sort.c
+├── 1-insertion_sort_list.c
+├── 2-selection_sort.c
+├── 3-quick_sort.c
+├── print_array.c
+├── print_list.c
+└── README.md
+```
+
+---
+
+## ✍️ Author
+
+**Randa Baeshen**
+Holberton School Student
+
+---
+
+🚀 *This project strengthens core algorithmic thinking and prepares you for technical interviews and real-world problem solving.*
 
