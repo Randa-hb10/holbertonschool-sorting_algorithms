@@ -1,5 +1,4 @@
-cat > 102-O << 'EOF'
-O(n + k)
-O(n + k)
-O(n + k)
-EOF
+O(n+k)
+O(n+k)
+O(n+k)
+
